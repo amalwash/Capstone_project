@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "history": "^5.2.0",
+    "react-router-dom": "^6.2.1"
+    
+  }
+}
