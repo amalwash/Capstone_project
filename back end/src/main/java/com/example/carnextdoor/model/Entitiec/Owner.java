@@ -18,14 +18,6 @@ public class Owner {
     private String owner_email;
 
 
-//    @OneToMany
-//    @JoinColumn(name = "car_id", referencedColumnName = "car_Id")
-//    private Car car;
-
-    //    @OneToMany(mappedBy = "car")
-//    @JsonIgnore
-//    private List<Owner> items = new ArrayList<>();
-
  @OneToMany(mappedBy = "owner")
    @JsonIgnore
  private List<Car> items = new ArrayList<>();

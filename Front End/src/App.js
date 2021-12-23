@@ -12,7 +12,9 @@ export default function App() {
         }}
       >
         <Link to="/home">Home</Link> |{" "}
-        <Link to="/Owner">Owner</Link>
+        <Link to="/RegisterOwner">RegisterOwner</Link>|{" "}
+        <Link to="/RegisterCar">RegisterCar</Link>|{" "}
+        <Link to="/RegisterUser">RegisterUser</Link>
       </nav>
       <Outlet/>
     </div>

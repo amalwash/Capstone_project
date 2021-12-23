@@ -2,7 +2,8 @@ import React from "react";
 import react, {useState } from 'react';
 import axios from "axios";
 
-export default function Owner() {
+export default function RegisterOwner() {
+    
     let [owner_id, setowner_id] = useState("")
     let [firstName, setOwner_firstNamE] = useState("")
     let [lastName, setOwner_lastName] = useState("")

@@ -16,10 +16,6 @@ public class Car {
     private String car_description;
 
 
-//    @OneToMany(mappedBy = "car")
-//    @JsonIgnore
-//    private List<Owner> items = new ArrayList<>();
-
    @ManyToOne
    @JoinColumn(name = "owner_ID", referencedColumnName = "owner_id")
     private Owner owner;
