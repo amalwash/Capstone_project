@@ -14,7 +14,8 @@ export default function App() {
         <Link to="/home">Home</Link> |{" "}
         <Link to="/RegisterOwner">RegisterOwner</Link>|{" "}
         <Link to="/RegisterCar">RegisterCar</Link>|{" "}
-        <Link to="/RegisterUser">RegisterUser</Link>
+        <Link to="/RegisterUser">RegisterUser</Link>|{" "}
+        <Link to="/ListCars">ListCars </Link>
       </nav>
       <Outlet/>
     </div>
