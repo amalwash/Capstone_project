@@ -1,10 +1,12 @@
 
 import React from "react";
+import ComponentHome from "./ComponentHome";
 
 export default function Home() {
     return (
-      <main style={{ padding: "1rem 0" }}>
-        <h2>Home</h2>
-      </main>
+      <div>
+        <ComponentHome/>
+      </div>
+      
     );
   }

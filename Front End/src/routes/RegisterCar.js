@@ -11,6 +11,7 @@ export default function RegisterCar(){
     let [car_color, setCar_color] = useState("")
     let [car_type, setCar_type] = useState("")
     let [car_description, setCar_description] = useState("")
+    let [ img , setImg]  = useState("")
    
     function handleCar_Id(event) {
         setCar_Id((car_Id = event.target.value));
@@ -31,16 +32,20 @@ export default function RegisterCar(){
     function handleCar_description(event) {
         setCar_description((car_description = event.target.value));
     }
-
+    function handleImg(event) {
+        setImg(img = event.target.value);
+    
+    }
     function rgisterHandel() {
-        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description }
+        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img }
 
         console.log("insid function");
         console.log(NewCar)
         axios({
             method: 'post',
-            url: 'car/add',
-            data: NewCar,
+            url: 'api/add',
+            data:
+                NewCar,
         });
     }
 
@@ -72,6 +77,10 @@ export default function RegisterCar(){
         <input type="text" name="CarType"
             placeholder="CarType" onChange={handleCar_type}
         />
+         <br />  <br />
+        <label> img     : </label>
+        <input placeholder=" image" onChange={handleImg} />
+      
         <br />  <br />
         <label> Description: </label>
         <input type="text" name="Description"
@@ -83,4 +92,4 @@ export default function RegisterCar(){
     </div>
 
 );
-}
+    }
