@@ -9,12 +9,18 @@ import Invoices from './routes/Invoices';
 import RegisterUser from './routes/RegisterUser';
 import RegisterCar from './routes/RegisterCar';
 import RegisterOwner from './routes/RegisterOwner';
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
+
       <Route path="/" element={<App />}>
       <Route path="home" element={<Home />} />
+
         <Route path=":registerCar" element={<RegisterCar />} />
         <Route path="registerOwner" element={< RegisterOwner/>} />
         <Route path="registerUser" element={<RegisterUser />} />

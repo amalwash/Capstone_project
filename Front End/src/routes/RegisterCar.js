@@ -1,6 +1,7 @@
 import React from "react";
 import react, {useState } from 'react';
 import axios from "axios";
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -51,8 +52,32 @@ export default function RegisterCar(){
 
     return (
         <div>
+           
+   {/* <img className='imgg' src="ajar.jpg" alt="Girl in a jacket" width="1100" height="600"/> 
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+  <a class="navbar-brand" href="Home">Home</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+     
+      <a class="nav-link" href="RegisterOwner">RegisterOwner</a>
+      <a class="nav-link" href="RegisterCar">RegisterCar</a>
+      <a class="nav-link" href="ListCars">ListCars</a>
+      <a class="nav-link" href="RegisterUser">RegisterUser</a>
+     
+      
+    </div>
+  </div>
+</div>
+</nav> */}
+        
         <h1 > Register NewCar </h1>
         <br />
+                
+
         <label> CarId: </label>
         <input type="text" name="CarId"
             placeholder="CarId"
