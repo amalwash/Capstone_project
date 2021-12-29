@@ -28,8 +28,8 @@ public class CarService {
     public void addNewCar(Car car){
         carRepository.save(car);
     }
-//    public void deleteCar(Integer carId){
-//        carRepository.deleteById(carId);
-//    }
+    public void deleteCar(Integer carId){
+        carRepository.deleteById(carId);
+    }
 }
 

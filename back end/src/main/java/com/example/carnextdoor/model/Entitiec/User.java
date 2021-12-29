@@ -1,9 +1,14 @@
 package com.example.carnextdoor.model.Entitiec;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
@@ -17,7 +22,13 @@ public class User {
     private int user_age;
     private String user_email;
 
-    public User(int user_id, String user_firstName, String user_lastName, String user_address, int user_phone, int user_age, String user_email) {
+
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Booking> items = new ArrayList<>();
+
+    public User(int user_id, String user_firstName, String user_lastName, String user_address, int user_phone, int user_age, String user_email, List<Booking> items) {
         this.user_id = user_id;
         this.user_firstName = user_firstName;
         this.user_lastName = user_lastName;
@@ -25,6 +36,7 @@ public class User {
         this.user_phone = user_phone;
         this.user_age = user_age;
         this.user_email = user_email;
+        this.items = items;
     }
 
     public User() {
@@ -86,6 +98,16 @@ public class User {
         this.user_email = user_email;
     }
 
+    public List<Booking> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Booking> items) {
+        this.items = items;
+    }
+
+
+
     @Override
     public String toString() {
         return "User{" +
@@ -96,6 +118,7 @@ public class User {
                 ", user_phone=" + user_phone +
                 ", user_age=" + user_age +
                 ", user_email='" + user_email + '\'' +
+                ", items=" + items +
                 '}';
     }
 }

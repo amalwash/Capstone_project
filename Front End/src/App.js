@@ -4,10 +4,10 @@ import {Outlet, Link } from "react-router-dom";
 export default function App() {
   return (
     <div>
-       <br /><br />
+       <br />
       <h1>Car Next Door</h1>
-      <br /><br />
-         {/* <img className='imgg' src="ajar.jpg" alt="Girl in a jacket" width="1100" height="600"/>  */}
+      <br />
+           
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home">Home</a>
@@ -27,20 +27,24 @@ export default function App() {
     </div>
   </div>
 </nav>
-     
-      <nav
-        // style={{
-        //   borderBottom: "solid 1px",
-        //   paddingBottom: "1rem"
-        // }}
-      >
-        {/* <Link to="/home">Home</Link> |{" "}
-        <Link to="/RegisterOwner">RegisterOwner</Link>|{" "}
-        <Link to="/RegisterCar">RegisterCar</Link>|{" "}
-        <Link to="/RegisterUser">RegisterUser</Link>|{" "}
-        <Link to="/ListCars">ListCars </Link> */}
-      </nav>
+ 
+
       <Outlet/>
-    </div>
+ {/* <div className="main">
+ <h3>With your free car sharing membership, you can choose cars around carthe country</h3>
+ <h3>We have cars close to home, airports and train stations to help you get around</h3> 
+ </div>
+ <br /> <br />
+    <div className="ciy">
+  <a href="/ListCars" > <img  src="mon.jpg" class="rounded-pill" alt="kn" /></a><img src="Qa.jpg" class="rounded-pill" alt="kn"/>
+    <img src="riadh.jpg" class="rounded-pill" alt="kn"/>   <img src="jadd.jpg" class="rounded-pill" alt="kn"/>
+      <img src="maka.jpg" class="rounded-pill" alt="kn"/> <br /> <br />   <img src="hai.jpg" class="rounded-pill" alt="kn"/>
+      <img src="alj.jpg" class="rounded-pill" alt="kn"/>   <img src="arar.jpg" class="rounded-pill" alt="kn"/><img src="tap.jpg" class="rounded-pill" alt="kn"/>
+      <img src="kab.jpg" class="rounded-pill" alt="kn"/><br /> <br /> 
+      <img src="aser.jpg" class="rounded-pill" alt="kn"/> <img src="naj.jpg" class="rounded-pill" alt="kn"/>
+      <img src="jas.jpg" class="rounded-pill" alt="kn"/><img src="damam.jpg" class="rounded-pill" alt="kn"/>
+      <br /> <br /> <br /> <br /> <br /> <br />
+    </div> */}
+     </div>
   );
 }

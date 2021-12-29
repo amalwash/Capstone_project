@@ -1,21 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-/* .imgg{
-  padding: 80px;
- margin: -100px; 
- } */
 
 .ditails{
   margin: 500px;
@@ -44,3 +26,37 @@ margin: 150px;
 margin-top: -300px;
 font-size: 21px;
 }
+.ciy{
+  background-position: center;
+  margin: 0 8%;
+
+}
+.img1{
+  width: 400px;
+  height: 200px;
+}
+.card-img-top1{
+  
+  margin: top -40px;
+ 
+ 
+}
+
+.col{
+  margin-left: 90px;
+  width: 300px;
+  align-items: center;
+ 
+}
+
+.card-title{
+  text-align: center; 
+
+  margin-top: -10px;
+}
+ .main{
+
+  text-align: center; 
+  
+
+ }

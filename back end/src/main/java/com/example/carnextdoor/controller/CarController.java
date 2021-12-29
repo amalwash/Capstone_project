@@ -8,16 +8,19 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping(path = "/car")
+
+
 public class CarController {
+
     private CarService carService;
+
 
     @Autowired
     public CarController(CarService carService) {
         this.carService = carService;
     }
 
-    @GetMapping
+    @GetMapping(path = "api/Cars")
     public List< Car > getCars() {
         return carService.getCars();
     }
@@ -28,13 +31,24 @@ public class CarController {
         return carService.getCar(carId);
     }
 
-    @PostMapping("add")
+    @PostMapping("api/add")
     public void registerNewCar(@RequestBody Car car) {
         carService.addNewCar(car);
     }
-//@DeleteMapping(path = "delete/{carId}")
+
+
+//@DeleteMapping(path = "api/delete/{carId}")
 //    public void deleteCar(@PathVariable("carId")Integer carId){
 //        carService.deleteCar(carId);
 //}
+
+   @DeleteMapping(path = "api/delete/{carId}")
+   public void deleteCar(@PathVariable("carId")String carId){
+        int intcarId = Integer.parseInt(carId);
+       carService.deleteCar(intcarId);
+
+   }
+
+
 
 }

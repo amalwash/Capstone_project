@@ -1,9 +1,6 @@
 package com.example.carnextdoor.model.Entitiec;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @Table
@@ -14,19 +11,27 @@ public class Car {
     private String car_color;
     private String car_type;
     private String car_description;
+    private String img;
 
 
-   @ManyToOne
-   @JoinColumn(name = "owner_ID", referencedColumnName = "owner_id")
+    @ManyToOne
+    @JoinColumn(name = "owner_ID", referencedColumnName = "owner_id")
     private Owner owner;
 
-    public Car(int car_Id, String car_model, String car_color, String car_type, String car_description, Owner owner) {
+
+    @OneToOne(mappedBy = "car")
+    private Booking booking;
+
+
+    public Car(int car_Id, String car_model, String car_color, String car_type, String car_description, String img, Owner owner, Booking booking) {
         this.car_Id = car_Id;
         this.car_model = car_model;
         this.car_color = car_color;
         this.car_type = car_type;
         this.car_description = car_description;
+        this.img = img;
         this.owner = owner;
+        this.booking = booking;
     }
 
     public Car() {
@@ -72,6 +77,14 @@ public class Car {
         this.car_description = car_description;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     public Owner getOwner() {
         return owner;
     }
@@ -80,15 +93,11 @@ public class Car {
         this.owner = owner;
     }
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                "car_Id=" + car_Id +
-                ", car_model='" + car_model + '\'' +
-                ", car_color='" + car_color + '\'' +
-                ", car_type='" + car_type + '\'' +
-                ", car_description='" + car_description + '\'' +
-                ", owner=" + owner +
-                '}';
+    public Booking getBooking() {
+        return booking;
+    }
+
+    public void setBooking(Booking booking) {
+        this.booking = booking;
     }
 }
