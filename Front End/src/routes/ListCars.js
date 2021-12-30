@@ -28,29 +28,7 @@ export default class ListCars extends Component {
     }
     render() {
         return (
-          
           <div>
-               {/* <img className='imgg' src="ajar.jpg" alt="Girl in a jacket" width="1100" height="600"/> 
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="Home">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-       
-        <a class="nav-link" href="RegisterOwner">RegisterOwner</a>
-        <a class="nav-link" href="RegisterCar">RegisterCar</a>
-        <a class="nav-link" href="ListCars">ListCars</a>
-        <a class="nav-link" href="RegisterUser">RegisterUser</a>
-       
-        
-     </div>
-    </div>
-  </div>
-</nav> */}
-            
               <table >
                 <tbody>
                   {this.state.Cars.map((item => (
@@ -59,6 +37,8 @@ export default class ListCars extends Component {
                                 <td>{item.car_color}</td>
                                 <td>{item.car_type}</td>
                                 <td><img height="150 px" width="150 px" src={item.img}/></td>
+                                <td>{item.owner.owner_firstName}</td>
+                                <td>{item.owner.owner_lasttName}</td>
                                 <td><button onClick={(e) => this.deleteListCar(item.car_Id , e)}>delete</button></td>
                     </tr>
                   )))

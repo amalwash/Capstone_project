@@ -7,13 +7,16 @@ import Button from 'react-bootstrap/Button'
 
 export default function RegisterCar(){
 
+    
     let [car_Id, setCar_Id] = useState("")
     let [car_model, setCar_model] = useState("")
     let [car_color, setCar_color] = useState("")
     let [car_type, setCar_type] = useState("")
     let [car_description, setCar_description] = useState("")
     let [ img , setImg]  = useState("")
-   
+   let[ owner_id , setOwner_id]= useState("")
+
+
     function handleCar_Id(event) {
         setCar_Id((car_Id = event.target.value));
     }
@@ -37,8 +40,11 @@ export default function RegisterCar(){
         setImg(img = event.target.value);
     
     }
+    function handleOwner_id(event){
+        setOwner_id((owner_id=event.target.value))
+       }
     function rgisterHandel() {
-        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img }
+        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img ,owner:{owner_id:owner_id}}
 
         console.log("insid function");
         console.log(NewCar)
@@ -52,27 +58,6 @@ export default function RegisterCar(){
 
     return (
         <div>
-           
-   {/* <img className='imgg' src="ajar.jpg" alt="Girl in a jacket" width="1100" height="600"/> 
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container-fluid">
-  <a class="navbar-brand" href="Home">Home</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-     
-      <a class="nav-link" href="RegisterOwner">RegisterOwner</a>
-      <a class="nav-link" href="RegisterCar">RegisterCar</a>
-      <a class="nav-link" href="ListCars">ListCars</a>
-      <a class="nav-link" href="RegisterUser">RegisterUser</a>
-     
-      
-    </div>
-  </div>
-</div>
-</nav> */}
         
         <h1 > Register NewCar </h1>
         <br />
@@ -110,6 +95,10 @@ export default function RegisterCar(){
         <label> Description: </label>
         <input type="text" name="Description"
             placeholder="Description" onChange={handleCar_description}
+        />
+           <label> OwnerID: </label>
+        <input type="text" name="OwnerID"
+            placeholder="OwnerID" onChange={handleOwner_id}
         />
         <br />  <br />
         <button onClick={rgisterHandel}>Submit</button>

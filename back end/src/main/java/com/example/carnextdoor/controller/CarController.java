@@ -30,17 +30,15 @@ public class CarController {
     public Optional< Car > getCar(@PathVariable(name = "carId") Integer carId) {
         return carService.getCar(carId);
     }
+//    @GetMapping(path = "api/owner/cars")
+//    public List<Integer> getOwners(@RequestParam (name = "car_Id") Integer car_Id) {
+//
+//    }
 
     @PostMapping("api/add")
     public void registerNewCar(@RequestBody Car car) {
         carService.addNewCar(car);
     }
-
-
-//@DeleteMapping(path = "api/delete/{carId}")
-//    public void deleteCar(@PathVariable("carId")Integer carId){
-//        carService.deleteCar(carId);
-//}
 
    @DeleteMapping(path = "api/delete/{carId}")
    public void deleteCar(@PathVariable("carId")String carId){

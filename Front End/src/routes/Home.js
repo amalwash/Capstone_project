@@ -1,6 +1,8 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
+
+
 export default function Home() {
 
 
@@ -19,8 +21,29 @@ export default function Home() {
         <p className='ditails2'> So this is just one on one with the person how is renting his  <br />Just through this application you can easily and without  <br />
           trouble rent a car anf you don't know maybe the car is next door</p>
       </p>
+      <hr />
+      <br /> <br />
+      <h2 className="main">Find the perfect car for your next trip</h2>
+      <br />
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="hod.jpg" class="card-img-top" />
 
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="van.jpg" class="card-img-top" />
 
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="cars.jpg" class="card-img-top" alt="..." />
+          </div>
+        </div>
+      </div>
       <br /> <br /> <br /> <br />
 
       <hr />
@@ -28,42 +51,42 @@ export default function Home() {
         <h3>With your free car sharing membership, you can choose cars around carthe country</h3>
         <h3>We have cars close to home, airports and train stations to help you get around</h3>
       </div>
-      <br /> <br />  <br /> <br /> 
+      <br /> <br />  <br /> <br />
 
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-           <a href='/ListCars'>
-          <img src="riadh.jpg" class="card-img-top"/></a>
+          <a href='/ListCars'>
+            <img src="riadh.jpg" class="card-img-top" /></a>
           <div class="card-body">
             <h5 class="card-title">AL Riyadh</h5>
           </div>
         </div>
         <div class="col">
-          <img src="damam.jpg" class="card-img-top" alt="..." />
+          <img src="damam.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">AL Dammam</h5>
           </div>
         </div>
         <div class="col">
-          <img src="maka.jpg" class="card-img-top" alt="..." />
+          <img src="maka.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Mecca</h5>
           </div>
         </div>
         <div class="col">
-          <img src="mon.jpg" class="card-img-top" alt="..." />
+          <img src="mon.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Madina AL Monawara</h5>
           </div>
         </div>
         <div class="col">
-          <img src="jadd.jpg" class="card-img-top" alt="..." />
+          <img src="jadd.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Jeddah  </h5>
           </div>
         </div>
         <div class="col">
-          <img src="tap.jpg" class="card-img-top" alt="..." />
+          <img src="tap.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Tabuk</h5>
           </div>
@@ -75,19 +98,19 @@ export default function Home() {
           </div>
         </div>
         <div class="col">
-          <img src="arar.jpg" class="card-img-top" alt="..." />
+          <img src="arar.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Arar</h5>
           </div>
         </div>
         <div class="col">
-          <img src="ImgCar/alj.jpg" class="card-img-top" alt="..." />
+          <img src="alj.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Al-Jauf  </h5>
           </div>
         </div>
         <div class="col">
-          <img src="aser.jpg" class="card-img-top" alt="..." />
+          <img src="aser.jpg" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Aser</h5>
           </div>
@@ -104,10 +127,10 @@ export default function Home() {
             <h5 class="card-title">jazan</h5>
           </div>
         </div>
-        </div>
-      
-        <br /> <br /> <br /> <br /> <br />
-    
+      </div>
+
+      <br /> <br /> <br /> <br /> <br />
+
       <br /> <br /> <br /> <br /> <br />
     </div>
 

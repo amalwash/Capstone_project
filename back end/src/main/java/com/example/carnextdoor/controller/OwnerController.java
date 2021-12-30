@@ -36,6 +36,7 @@ public class OwnerController {
         ownerService.addNewOwner(owner);
     }
 
+
     @DeleteMapping(path = "delete/{ownerId}")
     public void deleteOwner(@PathVariable ("ownerId") Integer ownerId){
         ownerService.deleteOwner(ownerId);
