@@ -5,8 +5,11 @@ import App from './App';
 import Home from './routes/Home';
 import Invoice from './routes/Invoice';
 import ListCars from './routes/ListCars';
-import Invoices from './routes/Invoices';
+import ListVanCar from './routes/ListVanCar';
+import ListSmallCar from './routes/ListSmallCar';
 import RegisterUser from './routes/RegisterUser';
+import detilsCars from './routes/detilsCars';
+import ListUteCar from './routes/ListUteCar';
 import RegisterCar from './routes/RegisterCar';
 import RegisterOwner from './routes/RegisterOwner';
 import './index.css';
@@ -25,7 +28,12 @@ ReactDOM.render(
         <Route path="registerOwner" element={< RegisterOwner/>} />
         <Route path="registerUser" element={<RegisterUser />} />
         <Route path="ListCars" element={<ListCars />} />
-        <Route path="invoices" element={<Invoices />}>
+        <Route path="ListCars" element={<ListCars />}/>
+        <Route path="ListSmallCar" element={<ListSmallCar />}/>
+        <Route path="listVanCar" element={<ListVanCar />}/>
+        <Route path="listUteCar" element={<ListUteCar />}/>
+        <Route path="detilsCars" element={<detilsCars />}/>
+        <Route path="Invoice" element={<Invoice />}>
           <Route path="Invoice" element={<Invoice />} />
           <Route
             index

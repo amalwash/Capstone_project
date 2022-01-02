@@ -7,6 +7,7 @@ export default class ListCars extends Component {
         super(props);
         this.state = {
             Cars: [],
+          
         };
 
     }
@@ -26,6 +27,7 @@ export default class ListCars extends Component {
             this.setState({Cars});
         })
     }
+  
     render() {
         return (
           <div>
@@ -36,12 +38,12 @@ export default class ListCars extends Component {
                                 <td>{item.car_model}</td>
                                 <td>{item.car_color}</td>
                                 <td>{item.car_type}</td>
-                                <td><img height="150 px" width="150 px" src={item.img}/></td>
+                                <td><img src={item.img}/></td>
                                 <td>{item.owner.owner_firstName}</td>
                                 <td>{item.owner.owner_lasttName}</td>
                                 <td><button onClick={(e) => this.deleteListCar(item.car_Id , e)}>delete</button></td>
                     </tr>
-                  )))
+                    )))
                 }
                 </tbody>
               </table>
@@ -49,3 +51,42 @@ export default class ListCars extends Component {
         );
       }
     }
+
+//     return (
+//       <div>
+//           {/* <table >
+//               <thead>
+//                   <tr>
+//                       <th >Model</th>
+//                       <th >Color</th>
+//                       <th >Type</th>
+//                       <th>Img</th>
+//                   </tr>
+//               </thead>
+//               <tbody> */}
+//           <Container className="Container" >
+//               {this.state.Cars.map((item => (
+//                   <CardGroup key={item.car_Id}>
+//                       <Card className="item"  >
+//                           <Card.Img height="100" width="100" src={item.img} />
+//                           <Card.Body  >
+//                               <Card.Title>{item.car_color}</Card.Title>
+//                                 <Card.Title>{item.car_type}</Card.Title>
+//                               <Card.Text>{item.car_model}</Card.Text>
+//                               {/* <Card.Text><input placeholder="commits" type='text'></input>
+//                               <button >send</button></Card.Text> */}
+//                               <Button variant="btn btn-secondary btn-lg" onClick={(e) => this.deleteListCar(item.car_Id , e)}>delete</Button>
+//                               {/* </tr> */}
+//                           </Card.Body>
+//                       </Card>
+//                   </CardGroup>
+//               )))
+//               }
+//               {/* </tbody>
+//           </table> */}
+//           </Container>
+//       </div>
+//   );
+// }
+// }
+  

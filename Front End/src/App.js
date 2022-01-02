@@ -3,11 +3,10 @@ import {Outlet, Link } from "react-router-dom";
 
 export default function App() {
   return (
-    <div>
+    <div className="main3">
        <br />
       <h1>Car Next Door</h1>
       <br />
-           
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home">Home</a>

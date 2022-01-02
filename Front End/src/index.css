@@ -41,13 +41,18 @@ font-size: 21px;
  
  
 }
-
+.main3{
+  align-items: center;
+height: 100%;
+width: 100%;
+}
 .col{
   margin-left: 90px;
   width: 300px;
   align-items: center;
  
 }
+
 
 .card-title{
   text-align: center; 

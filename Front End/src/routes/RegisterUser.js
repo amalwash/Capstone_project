@@ -37,7 +37,7 @@ export default function RegisterUser() {
 
 
   function rgisterHandel() {
-      let NewUser = { user_id: user_id, owner_firstName: firstName, owner_lastName: lastName, owner_age: Age, owner_email: Email, owner_address: Address, owner_phone: phone }
+      let NewUser = { user_id: user_id, user_firstName: firstName, user_lastName: lastName, user_age: Age, user_email: Email, user_address: Address, user_phone: phone }
 
       console.log("insid function");
       console.log(NewUser)
@@ -74,9 +74,9 @@ export default function RegisterUser() {
 </nav> */}
           <h1 > Register NewUser </h1>
           <br />
-          <label> OwnerId: </label>
-          <input type="text" name="OwnerId"
-              placeholder="OwnerId"
+          <label> UserID: </label>
+          <input type="text" name="UserID"
+              placeholder="UserID"
               onChange={handleUser_id}
           />
           <br />  <br />
