@@ -2,7 +2,7 @@ import axios from "axios";
 import { Component } from "react";
 
 
-export default class ListUteCar extends Component {
+export default class ListVanCar extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,7 +21,7 @@ export default class ListUteCar extends Component {
     }
   
     render() {
-        const myCars = this.state.Cars.filter(item => item.car_type == 'Ute' );
+        const myCars = this.state.Cars.filter(item => item.car_type == 'van' );
         
         return (
           <div>
