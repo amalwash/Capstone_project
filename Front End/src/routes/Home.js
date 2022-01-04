@@ -1,6 +1,5 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 import '../index.css';
-import ListCars from './ListCars';
 import {Link} from 'react-router-dom'
 
 

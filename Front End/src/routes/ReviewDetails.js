@@ -1,5 +1,5 @@
 import React from "react";
-import react, {useState } from 'react';
+import react, { useState } from 'react';
 import axios from "axios";
 
 export default function ReviewDetails() {
@@ -11,62 +11,56 @@ export default function ReviewDetails() {
 
     function handleReview_id(event) {
         setReview_id((review_id = event.target.value));
-      }
-      function handleReview_details(event) {
+    }
+    function handleReview_details(event) {
         setReview_details((review_details = event.target.value));
-      }
-      function handleReview_Date(event) {
+    }
+    function handleReview_Date(event) {
         setReview_Date((review_Date = event.target.value));
-      }
-      function rgisterHandel() {
-        let Reviews = { review_id: review_id, review_details: review_details, review_Date: review_Date}
+    }
+    function rgisterHandel() {
+        let Reviews = { review_id: review_id, review_details: review_details, review_Date: review_Date }
 
-}
+    
 
-console.log("insid function");
-console.log(NewUser)
-axios({
-    method: 'post',
-    url: 'review/add',
-    data: Reviews,
-});
+    console.log("insid function");
+    console.log(Reviews)
+    axios({
+        method: 'post',
+        url: 'review/add',
+        data: Reviews,
+    });
 
 }
 
 return (
 
     <div>
-        <h1 > Register NewUser </h1>
+        <h1 > Register Review </h1>
         <br />
-        <label> OwnerId: </label>
-        <input type="text" name="OwnerId"
-            placeholder="OwnerId"
+        <label> ReviewId: </label>
+        <input type="text" name="ReviewId"
+            placeholder="ReviewId"
             onChange={handleReview_id}
         />
         <br />  <br />
         <label> Firstname: </label>
-        <input type="text" name="firstName"
-            placeholder="FirstName"
-            onChange={handleUser_firstName}
+        <input type="text" name="ReviewDetails"
+            placeholder="ReviewDetails"
+            onChange={handleReview_details}
         />
         <br />  <br />
 
-        <label className="last"> Lastname: </label>
-        <input type="text" name="lastName"
-            placeholder="LastName"
-            onChange={handleUser_lastName}
+        <label className="last"> Review Date: </label>
+        <input type="text" name="ReviewDate"
+            placeholder="ReviewDate"
+            onChange={handleReview_Date}
         />
         <br />  <br />
+        <button onClick={rgisterHandel}>Submit</button>
 
-        <label> Age: </label>
-        <input type="text" name="age"
-            placeholder="Age" onChange={handleUser_age}
-        />
-        
-        <br />  <br />
-          <button onClick={rgisterHandel}>Submit</button>
+    </div>
 
-      </div>
+);
 
-  );
-
+}

@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App'; 
 import Home from './routes/Home';
-import Invoice from './routes/Invoice';
 import ListCars from './routes/ListCars';
 import ListVanCar from './routes/ListVanCar';
+import Epenses from './routes/expenses';
+import ReviewDetails from './routes/ReviewDetails';
 import ListSmallCar from './routes/ListSmallCar';
 import RegisterUser from './routes/RegisterUser';
-import detilsCars from './routes/detilsCars';
 import ListUteCar from './routes/ListUteCar';
 import RegisterCar from './routes/RegisterCar';
 import RegisterOwner from './routes/RegisterOwner';
 import './index.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -32,9 +32,9 @@ ReactDOM.render(
         <Route path="ListSmallCar" element={<ListSmallCar />}/>
         <Route path="listVanCar" element={<ListVanCar />}/>
         <Route path="listUteCar" element={<ListUteCar />}/>
-        <Route path="detilsCars" element={<detilsCars />}/>
-        <Route path="Invoice" element={<Invoice />}>
-          <Route path="Invoice" element={<Invoice />} />
+        <Route path="Epenses" element={<Epenses />}/>
+        <Route path="ReviewDetails" element={<ReviewDetails />}>
+          <Route path="Epenses" element={<Epenses />} />
           <Route
             index
             element={

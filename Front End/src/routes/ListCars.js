@@ -1,11 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Container from 'react-bootstrap/Container';
-// import CardGroup from 'react-bootstrap/CardGroup';
-// import Card from 'react-bootstrap/Card'
-// import 'bootstrap/dist/css/bootstrap.css';
-// import Button from 'react-bootstrap/Button';
+import '../index.css';
+import {Link} from 'react-router-dom'
 
 
 export default class ListCars extends Component {
@@ -39,103 +35,44 @@ export default class ListCars extends Component {
         return (
 
 
-            <div >
-                <table >
-                    <tbody>
+            <div  >
+                <div className="recipe-card">
+                    <div className="recipe-card-image">
+
                         {this.state.Cars.map((item => (
-                            <tr key={item.car_Id}>
-                                <td class="list-group-item">Model: {item.car_model}</td>
-                                <td class="list-group-item">color:{item.car_color}</td>
-                                <td class="list-group-item">TypeCar:{item.car_type}</td>
-                                <td>{item.owner.owner_firstName}</td>
-                                <td><button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button></td>
-                                <td ><img src={item.img} /></td>
-                                
-                            </tr>
+
+                            <div key={item.car_Id}>
+                                <p className="recipe-card-content"> </p>
+                           <Link to={`/DetailsCar/${item.car_Id}`}>   <img className="recipe-card-image" src={item.img} /></Link>  
+                                <h3 className="recipe-title">Model: {item.car_model}</h3>
+                                <h3 className="recipe-title">color:{item.car_color}</h3>
+                                <h3 className="recipe-title">TypeCar:{item.car_type}</h3>
+                                <h3>Owner Of Car:{item.owner.owner_firstName}{item.owner.owner_lastName}</h3>
+                                <button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button>
+                                <Link to="/RegisterUser">  <button>Request</button></Link>
+
+
+                            </div>
+
+
                         )))
                         }
-                    </tbody>
-                </table>
 
 
-            </div>    );
+
+                    </div>
+                </div>
+
+            </div>
+
+        );
+
     }
 }
 
-                {/* 
 
 
-//             <div >
-//                 <table >
-//                     <tbody>
-//                         {this.state.Cars.map((item => (
-//                             <tr key={item.car_Id}>
 
-//                                 <div class="card" style="width: 18rem;">
-
-//                                     <td><img src={item.img} /></td>
-//                                     <th class="list-group list-group-flush">
-//                                         <td class="list-group-item">{item.car_model}</td>
-//                                         <td class="list-group-item">{item.car_color}</td>
-//                                         <td class="list-group-item">{item.car_type}</td>
-//                                     </th>
-//                                 </div>
-//                                 </tr>
-//                         )))
-//     }
-//     </tbody>
-//     </table>
-//     </div>
-//         );
-// }
-// }
-
-                      
-
-                                 <div >
-                <table >
-                    <tbody>
-                        {this.state.Cars.map((item => (
-                            <tr key={item.car_Id}>
-                                <td class="list-group-item">{item.car_model}</td>
-                                <td class="list-group-item">{item.car_color}</td>
-                                <td class="list-group-item">{item.car_type}</td>
-                                <td><img src={item.img} /></td>
-                                <td>{item.owner.owner_firstName}</td>
-                                <td><button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button></td>
-                            </tr>
-                        )))
-                        }
-                    </tbody>
-                </table>
-            
-
-                                );
-    }
-}
-
-                                <Card style={{ width: '18rem' }}>
-{this.state.Cars.map((item => (
-  <Card.Img variant="top"src={item.img} />
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-  </Card.Body>
-  <ListGroup className="list-group-flush">
-    <ListGroupItem>{item.car_type}</ListGroupItem>
-    <ListGroupItem>{item.car_model}</ListGroupItem>
-    <ListGroupItem>{item.car_color}</ListGroupItem>
-  </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
-</Card> 
-
- */}
 
 
 
