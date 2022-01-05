@@ -1,42 +1,48 @@
 package com.example.carnextdoor.model.Entitiec;
-
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @Table
 public class User {
-@Id
+
+
+    @Id
+    private String userName;
     private int user_id;
-    private String user_firstName;
-    private String user_lastName;
+    private String firstname;
+    private String password;
     private String user_address;
     private int user_phone;
     private int user_age;
     private String user_email;
+    private String roles;
+
+//    @OneToMany(mappedBy = "user")
+//    @JsonIgnore
+//    private List<Booking> items = new ArrayList<>();
 
 
-
-    @OneToMany(mappedBy = "user")
-    @JsonIgnore
-    private List<Booking> items = new ArrayList<>();
-
-    public User(int user_id, String user_firstName, String user_lastName, String user_address, int user_phone, int user_age, String user_email, List<Booking> items) {
+    public User(String userName, int user_id, String firstname, String password, String user_address, int user_phone, int user_age, String user_email, String roles) {
+        this.userName = userName;
         this.user_id = user_id;
-        this.user_firstName = user_firstName;
-        this.user_lastName = user_lastName;
+        this.firstname = firstname;
+        this.password = password;
         this.user_address = user_address;
         this.user_phone = user_phone;
         this.user_age = user_age;
         this.user_email = user_email;
-        this.items = items;
+        this.roles = roles;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
     public User() {
@@ -50,20 +56,28 @@ public class User {
         this.user_id = user_id;
     }
 
-    public String getUser_firstName() {
-        return user_firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setUser_firstName(String user_firstName) {
-        this.user_firstName = user_firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getUser_lastName() {
-        return user_lastName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_lastName(String user_lastName) {
-        this.user_lastName = user_lastName;
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getUser_address() {
@@ -94,31 +108,8 @@ public class User {
         return user_email;
     }
 
+
     public void setUser_email(String user_email) {
         this.user_email = user_email;
-    }
-
-    public List<Booking> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Booking> items) {
-        this.items = items;
-    }
-
-
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "user_id=" + user_id +
-                ", user_firstName='" + user_firstName + '\'' +
-                ", user_lastName='" + user_lastName + '\'' +
-                ", user_address='" + user_address + '\'' +
-                ", user_phone=" + user_phone +
-                ", user_age=" + user_age +
-                ", user_email='" + user_email + '\'' +
-                ", items=" + items +
-                '}';
     }
 }

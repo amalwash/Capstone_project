@@ -4,6 +4,8 @@ import axios from "axios";
 
 export default function ReviewDetails() {
 
+//  alert("Thank you, your order has been placed, pick up the car")
+
     let [review_id, setReview_id] = useState("")
     let [review_details, setReview_details] = useState("")
     let [review_Date, setReview_Date] = useState("")
@@ -58,7 +60,8 @@ return (
         />
         <br />  <br />
         <button onClick={rgisterHandel}>Submit</button>
-
+        
+ 
     </div>
 
 );

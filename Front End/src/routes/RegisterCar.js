@@ -14,7 +14,7 @@ export default function RegisterCar(){
     let [car_type, setCar_type] = useState("")
     let [car_description, setCar_description] = useState("")
     let [ img , setImg]  = useState("")
-   let[ owner_id , setOwner_id]= useState("")
+  let[ owner_id , setOwner_id]= useState("")
 
 
     function handleCar_Id(event) {
@@ -44,13 +44,13 @@ export default function RegisterCar(){
         setOwner_id((owner_id=event.target.value))
        }
     function rgisterHandel() {
-        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img ,owner:{owner_id:owner_id}}
+        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img  ,owner:{owner_id:owner_id} }
 
         console.log("insid function");
         console.log(NewCar)
         axios({
             method: 'post',
-            url: 'api/add',
+            url: 'api/car/add',
             data:
                 NewCar,
         });
@@ -100,6 +100,7 @@ export default function RegisterCar(){
            <label> OwnerID: </label>
         <input type="text" name="OwnerID"
             placeholder="OwnerID" onChange={handleOwner_id}
+           
         />
         <br />  <br />
         <button onClick={rgisterHandel}>Submit</button>

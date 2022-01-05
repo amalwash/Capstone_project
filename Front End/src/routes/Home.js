@@ -26,8 +26,65 @@ export default function Home() {
 
       <br /> <br />
       <hr />
+      <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {/* <h2 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h2> */}
+                    <h3 class="section-subheading text-muted">With your free car sharing membership, you can choose cars around carthe country</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href='/ListCars'>
+                        <img src="riadh.jpg" class="img-responsive"/> </a>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">AL Riyadh</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href='/ListCars'>
+                        <img src="damam.jpg" class="img-responsive" alt=""/></a>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">AL Dammam</p>
+                      
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="maka.jpg" class="img-responsive"/>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">Mecca</p>
+                       
+                    </div>
+                </div>
+                </div>
+                </div>
+                </section>
+                
       <br /> <br />
-      <h2 className="main">Find the perfect car for your next trip</h2>
+      {/* <h2 className="main">Find the perfect car for your next trip</h2>
       <br />
       <div class="row row-cols-1 row-cols-md-3 g-4 cnd-hero--borrowers cnd-flex cnd-justify-center ">
         <div class="col">
@@ -61,115 +118,222 @@ export default function Home() {
            
           </div>
         </div>
-      </div>
+      </div> */}
       <br /> <br /> <br /> <br />
-      <div className="main">
-        <h3>With your free car sharing membership, you can choose cars around carthe country</h3>
-        <h3>We have cars close to home, airports and train stations to help you get around</h3>
-      </div>
-      <br /> <br />  <br /> <br />
 
-      <div class="row row-cols-1 row-cols-md-3 g-4 cnd-justify-center">
-        <div class="col cnd-justify-center">
-          <a href='/ListCars'>
-            <img src="riadh.jpg" class="card-img-top" /></a>
-          <div class="card-body">
-            <h5 class="card-title">AL Riyadh</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="damam.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">AL Dammam</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="maka.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Mecca</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="mon.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Madina AL Monawara</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="jadd.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Jeddah  </h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="tap.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Tabuk</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="naj.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title"> Najran </h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="arar.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Arar</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="alj.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Al-Jauf  </h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="aser.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Aser</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="hai.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">Hail</h5>
-          </div>
-        </div>
-        <div class="col">
-        <a href='/ListCars'>
-          <img src="jas.jpg" class="card-img-top" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">jazan</h5>
-          </div>
-        </div>
-      </div>
+      <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    {/* <h2 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h2> */}
+                    <h3 class="section-subheading text-muted">With your free car sharing membership, you can choose cars around carthe country</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href='/ListCars'>
+                        <img src="riadh.jpg" class="img-responsive"/> </a>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">AL Riyadh</p>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <a href='/ListCars'>
+                        <img src="damam.jpg" class="img-responsive" alt=""/></a>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">AL Dammam</p>
+                      
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="maka.jpg" class="img-responsive"/>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">Mecca</p>
+                       
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="mon.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        
+                        <p class="text-muted">Madina AL Monawara</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="jadd.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Jeddah</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="tap.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Tabuk</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="hai.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Hail</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="aser.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Aser</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="alj.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Al-Jauf </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="arar.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Arar</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="naj.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <p class="text-muted">Najran</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="jas.jpg" class="img-responsive" alt=""/>
+                    </a>
+                    <div class="portfolio-caption">
+                    <p class="text-muted">jazan</p>
 
-      <br /> <br /> <br /> <br /> <br />
-
-      <br /> <br /> <br /> <br /> <br />
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      {/*  */}
+      <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="glyphicon glyphicon-tree-conifer"></i>
+                    </span>
+                    <h4 class="service-heading">Here is a pokok</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="glyphicon glyphicon-heart"></i>
+                    </span>
+                    <h4 class="service-heading">Here's a heart</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="glyphicon glyphicon-tint"></i>
+                    </span>
+                    <h4 class="service-heading">Waterfall maybe?</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     </div>
 
 

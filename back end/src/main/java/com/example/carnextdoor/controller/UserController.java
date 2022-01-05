@@ -4,35 +4,53 @@ import com.example.carnextdoor.model.Entitiec.User;
 import com.example.carnextdoor.model.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.Optional;
 
 
 @RestController
-@RequestMapping(path = "user")
 public class UserController {
+
     private UserService userService;
-
-
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
 
-    @GetMapping
-    public List<User> getUsers() {
-        return userService.getUsers();
+
+
+    @GetMapping("api/user")
+
+    public List<User> getUser() {
+
+
+        return userService.getUser();
+    }
+
+    @GetMapping("api/user/login")
+    public String CheckLogin(@RequestParam(name="userName") String userName, @RequestParam(name="password")String password){
+
+        return userService.checkLogin(userName,password);
+    }
+
+    @PostMapping("api/user/add")
+    @ResponseBody
+    public String registerNewUser(@RequestBody User user){
+        int result = userService.addNewUser(user);
+        if(result == 0){
+            return "username already exist";
+        }
+        else{
+            return "login successfully";
+        }
+    }
+
+    @DeleteMapping(path = "api/user/delete/{userName}")
+    public void deleteUser(@PathVariable ("userName") String userName){
+        userService.deleteUser(userName);
     }
 
 
-    @GetMapping(path = "{userId}")
-    public Optional< User > getUser(@PathVariable(name = "userId") Integer userId) {
-        return userService.getUser(userId);
-    }
 
-    @PostMapping("add")
-    public void registerNewUser(@RequestBody User user) {
-        userService.addNewUser(user);
-    }
 }

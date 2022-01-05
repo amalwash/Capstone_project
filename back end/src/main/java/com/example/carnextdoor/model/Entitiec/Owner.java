@@ -101,18 +101,4 @@ public class Owner {
     public void setItems(List<Car> items) {
         this.items = items;
     }
-
-    @Override
-    public String toString() {
-        return "Owner{" +
-                "owner_id=" + owner_id +
-                ", owner_firstName='" + owner_firstName + '\'' +
-                ", owner_lastName='" + owner_lastName + '\'' +
-                ", owner_address='" + owner_address + '\'' +
-                ", owner_phone=" + owner_phone +
-                ", owner_age=" + owner_age +
-                ", owner_email='" + owner_email + '\'' +
-                ", items=" + items +
-                '}';
-    }
 }

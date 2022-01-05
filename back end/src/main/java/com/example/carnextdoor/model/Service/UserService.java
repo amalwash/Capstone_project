@@ -1,32 +1,54 @@
 package com.example.carnextdoor.model.Service;
-import com.example.carnextdoor.model.Entitiec.Car;
 import com.example.carnextdoor.model.Entitiec.User;
-import com.example.carnextdoor.model.Repository.UserRepository;
+import com.example.carnextdoor.model.Repository.UserRepositry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
+
 
 
 @Service
-public class UserService {
-    private UserRepository userRepository;
+public class UserService  {
 
+    private UserRepositry userRepositry;
     @Autowired
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-    public List<User> getUsers(){
-        return userRepository.findAll();
-
-    }
-    public Optional<User> getUser(Integer userId){
-        return userRepository.findById(userId);
-
-    }
-    public void addNewUser(User user){
-        userRepository.save(user);
+    public UserService(UserRepositry userRepositry) {
+        this.userRepositry = userRepositry;
     }
 
+    public List<User> getUser() {
+        return userRepositry.findAll();
 
+    }
+    public Integer addNewUser(User user){
+        if(userRepositry.existsById(user.getUserName())){
+
+            return 0;
+        }
+        else{
+            userRepositry.save(user);
+            return 1;
+        }
+
+    }
+
+    public String checkLogin(String userName,String password){
+        if(userRepositry.existsById(userName)){
+            String pass= userRepositry.findPassword(userName);
+
+            if(pass.equals(password)){
+                String role= userRepositry.findRoles(userName);
+
+                return "authenticated"+ role;
+            }
+            else{
+                return "password Does not match";
+            }
+
+        }
+        return "please sign up";
+    }
+    public void deleteUser(String userName) {
+        userRepositry.deleteById(userName);}
 }
+

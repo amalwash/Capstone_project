@@ -22,7 +22,6 @@ public class Car {
     @OneToOne(mappedBy = "car")
     private Booking booking;
 
-
     public Car(int car_Id, String car_model, String car_color, String car_type, String car_description, String img, Owner owner, Booking booking) {
         this.car_Id = car_Id;
         this.car_model = car_model;

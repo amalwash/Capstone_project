@@ -26,16 +26,12 @@ public class CarController {
     }
 
 
-    @GetMapping(path = "{carId}")
+    @GetMapping(path = "api/Cars/{carId}")
     public Optional< Car > getCar(@PathVariable(name = "carId") Integer carId) {
         return carService.getCar(carId);
     }
-//    @GetMapping(path = "api/owner/cars")
-//    public List<Integer> getOwners(@RequestParam (name = "car_Id") Integer car_Id) {
-//
-//    }
 
-    @PostMapping("api/add")
+    @PostMapping("api/car/add")
     public void registerNewCar(@RequestBody Car car) {
         carService.addNewCar(car);
     }

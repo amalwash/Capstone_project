@@ -43,14 +43,14 @@ export default class ListCars extends Component {
 
                             <div key={item.car_Id}>
                                 <p className="recipe-card-content"> </p>
-                           <Link to={`/DetailsCar/${item.car_Id}`}>   <img className="recipe-card-image" src={item.img} /></Link>  
+                                <Link to="/RegisterUser">  <img className="recipe-card-image" src={item.img} /> </Link>
                                 <h3 className="recipe-title">Model: {item.car_model}</h3>
                                 <h3 className="recipe-title">color:{item.car_color}</h3>
                                 <h3 className="recipe-title">TypeCar:{item.car_type}</h3>
                                 <h3>Owner Of Car:{item.owner.owner_firstName}{item.owner.owner_lastName}</h3>
                                 <button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button>
                                 <Link to="/RegisterUser">  <button>Request</button></Link>
-
+                                {/* <Link to={`/DetailsCar/${item.car_Id}`}> */}
 
                             </div>
 
