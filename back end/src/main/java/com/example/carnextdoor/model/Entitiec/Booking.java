@@ -10,15 +10,27 @@ public class Booking {
 
 
     @OneToOne
-    @JoinColumn(name ="car_Id",unique = true,updatable = false )
+    @JoinColumn(name = "Car_ID",unique = true,updatable = false)
     private Car car;
 
-    public Booking(int booking_id, Car car) {
-        Booking_id = booking_id;
-        this.car = car;
-    }
+    @ManyToOne
+    @JoinColumn(name = "UsersName", referencedColumnName = "userName")
+    private User user;
+
+
+    @OneToOne
+    @JoinColumn(name = "review_id", unique = true, updatable = false)
+    private Review review;
+
 
     public Booking() {
+    }
+
+    public Booking(int booking_id, Car car, User user, Review review) {
+        Booking_id = booking_id;
+        this.car = car;
+        this.user = user;
+        this.review = review;
     }
 
     public int getBooking_id() {
@@ -35,5 +47,21 @@ public class Booking {
 
     public void setCar(Car car) {
         this.car = car;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Review getReview() {
+        return review;
+    }
+
+    public void setReview(Review review) {
+        this.review = review;
     }
 }

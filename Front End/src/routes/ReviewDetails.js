@@ -37,32 +37,32 @@ export default function ReviewDetails() {
 
 return (
 
-    <div>
+    <form action="/reg" method="POST" id="regForm">
         <h1 > Register Review </h1>
         <br />
         <label> ReviewId: </label>
         <input type="text" name="ReviewId"
-            placeholder="ReviewId"
+            placeholder="ReviewId"class="textbox"
             onChange={handleReview_id}
         />
         <br />  <br />
-        <label> Firstname: </label>
-        <input type="text" name="ReviewDetails"
-            placeholder="ReviewDetails"
-            onChange={handleReview_details}
-        />
-        <br />  <br />
-
+        
         <label className="last"> Review Date: </label>
-        <input type="text" name="ReviewDate"
-            placeholder="ReviewDate"
+        <input type="textarea" name="ReviewDate"
+            placeholder="ReviewDate"class="textbox"
             onChange={handleReview_Date}
         />
+        <br />  <br />
+        <label> Review Details: </label>
+        <textarea maxlength="290" name=" Review Details" id="info"
+        placeholder="ReviewDetails" class="textbox"
+            onChange={handleReview_details}
+            />
         <br />  <br />
         <button onClick={rgisterHandel}>Submit</button>
         
  
-    </div>
+        </form>
 
 );
 

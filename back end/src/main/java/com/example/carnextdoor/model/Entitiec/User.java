@@ -1,7 +1,12 @@
 package com.example.carnextdoor.model.Entitiec;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -20,12 +25,12 @@ public class User {
     private String user_email;
     private String roles;
 
-//    @OneToMany(mappedBy = "user")
-//    @JsonIgnore
-//    private List<Booking> items = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+   @JsonIgnore
+   private List<Booking> items = new ArrayList<>();
 
 
-    public User(String userName, int user_id, String firstname, String password, String user_address, int user_phone, int user_age, String user_email, String roles) {
+    public User(String userName, int user_id, String firstname, String password, String user_address, int user_phone, int user_age, String user_email, String roles, List<Booking> items) {
         this.userName = userName;
         this.user_id = user_id;
         this.firstname = firstname;
@@ -35,17 +40,19 @@ public class User {
         this.user_age = user_age;
         this.user_email = user_email;
         this.roles = roles;
+        this.items = items;
     }
 
-    public String getRoles() {
-        return roles;
-    }
-
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 
     public User() {
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getUser_id() {
@@ -62,14 +69,6 @@ public class User {
 
     public void setFirstname(String firstname) {
         this.firstname = firstname;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getPassword() {
@@ -108,8 +107,23 @@ public class User {
         return user_email;
     }
 
-
     public void setUser_email(String user_email) {
         this.user_email = user_email;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
+
+    public void setRoles(String roles) {
+        this.roles = roles;
+    }
+
+    public List<Booking> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Booking> items) {
+        this.items = items;
     }
 }

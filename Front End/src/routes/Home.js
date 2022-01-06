@@ -7,6 +7,28 @@ export default function Home() {
 
   return (
     <div className='main3'>
+          <a name="home"></a>
+    <div class="intro-header">
+      <div class="bg-overlay">
+        <div class="container">
+  
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Car Next Door</h1>
+                        <h3>Get money while you are at home.</h3>
+                        <hr class="intro-divider"/>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+      </div>
+    </div>
 
       <p><img className='imgg3' src="ffff.jpg" alt='lions' width="100" height="100" align="left" />
         <p className='ditails'> The app is to rent a car
@@ -21,67 +43,66 @@ export default function Home() {
           trouble rent a car anf you don't know maybe the car is next door</p>
       </p>
       <br /> <br /> <br />
-      <h2 className='main'>How much does it cost?</h2>
+      {/* <h2 className='main'>How much does it cost?</h2>
       <h5 className='main'>Prices include fuel, damage cover and roadside assistance.</h5>
 
       <br /> <br />
-      <hr />
+      <hr /> */}
       <section id="portfolio" class="bg-light-gray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    {/* <h2 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h2> */}
-                    <h3 class="section-subheading text-muted">With your free car sharing membership, you can choose cars around carthe country</h3>
+                    <h3 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h3>
+                    <br />
+                    {/* <h2 class="section-subheading text-muted">With your free car sharing membership, you can choose cars around carthe country</h2> */}
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListSmallCar" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <a href='/ListCars'>
-                        <img src="riadh.jpg" class="img-responsive"/> </a>
+                        <a href='/ListSmallCar'>
+                        <img src="https://www.carnextdoor.com.au/assets/longtail/car-deb29fbceed5391f4c31af6a03468dbe38f4691f505ff775b004e4a45ce4c573.jpg" class="img-responsive"/> </a>
                     </a>
                     <div class="portfolio-caption">
-                    <p class="text-muted">AL Riyadh</p>
+                    <p class="text-muted">SmallCar</p>
                         
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListUteCar" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <a href='/ListCars'>
-                        <img src="damam.jpg" class="img-responsive" alt=""/></a>
+                        <a href='/ListUteCar'>
+                        <img src="https://www.carnextdoor.com.au/assets/longtail/ute-cc88303ffc8a0057e675ece04be7dfd78b26db0d557f196839edaa57eecd3a29.jpg" class="img-responsive" alt=""/></a>
                     </a>
                     <div class="portfolio-caption">
-                    <p class="text-muted">AL Dammam</p>
+                    <p class="text-muted">UteCar</p>
                       
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListVanCar" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="maka.jpg" class="img-responsive"/>
+                        <img src="https://www.carnextdoor.com.au/assets/longtail/van-2a7bcc146dd745bfa895168d354bba8416eb82a068e7dc2e79b07297c3482a39.jpg" class="img-responsive"/>
                     </a>
                     <div class="portfolio-caption">
-                    <p class="text-muted">Mecca</p>
+                    <p class="text-muted">VanCar</p>
                        
                     </div>
                 </div>
-                </div>
-                </div>
-                </section>
+                
                 
       <br /> <br />
       {/* <h2 className="main">Find the perfect car for your next trip</h2>
@@ -125,13 +146,13 @@ export default function Home() {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    {/* <h2 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h2> */}
+                    <h2 class="section-heading">With your free car sharing membership, you can choose cars around carthe country</h2>
                     <h3 class="section-subheading text-muted">With your free car sharing membership, you can choose cars around carthe country</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -146,7 +167,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -161,7 +182,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -175,7 +196,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -189,7 +210,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -202,7 +223,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -215,7 +236,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -228,7 +249,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -241,7 +262,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -254,7 +275,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -267,7 +288,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -280,7 +301,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <a href="/ListCars" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -334,6 +355,9 @@ export default function Home() {
             </div>
         </div>
     </section>
+    </div>
+                </div>
+                </section>
     </div>
 
 

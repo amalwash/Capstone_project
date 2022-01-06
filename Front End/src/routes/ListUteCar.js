@@ -32,7 +32,7 @@ export default class ListUteCar extends Component {
 
                       <div key={item.car_Id}>
                           <p className="recipe-card-content"> </p>
-                           <img className="recipe-card-image" src={item.img} />
+                          <img className="recipe-card-image" src={item.img} />
                           <h3 className="recipe-title">Model: {item.car_model}</h3>
                           <h3 className="recipe-title">color:{item.car_color}</h3>
                           <h3 className="recipe-title">TypeCar:{item.car_type}</h3>

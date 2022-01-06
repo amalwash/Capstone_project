@@ -59,7 +59,7 @@ export default function RegisterCar(){
     return (
         <div>
         
-        <h1 > Register NewCar </h1>
+        <h1  > Register NewCar </h1>
         <br />
                 
 

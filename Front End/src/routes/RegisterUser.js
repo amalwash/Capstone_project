@@ -107,7 +107,7 @@ export default function RegisterUser() {
         placeholder="phone" onChange={handleUser_phone}
       />
       <br />  <br />
-      <Link to="/ReviewDetails"><button onClick={rgisterHandel}>Submit</button></Link>{""}
+      <Link to="/Request"><button onClick={rgisterHandel}>Submit</button></Link>{""}
     
 
     </div>

@@ -8,21 +8,21 @@ import Home from "./routes/Home";
 export default function App() {
 
 
-//   let [authenticate, setAuthenticate] = useState(false);
-//   let check = "";
-//   function handleLogin(msg) {
-//     if(msg =="authenticatedADMIN"){
-//       setAuthenticate("authenticatedADMIN");
-//     }
-//     else if(msg =="authenticatedUSER"){
-//       setAuthenticate("authenticatedUSER");
-//     }
-//   }
-//   if (!authenticate) {
+  // let [authenticate, setAuthenticate] = useState(false);
+  // let check = "";
+  // function handleLogin(msg) {
+  //   if(msg =="authenticatedADMIN"){
+  //     setAuthenticate("authenticatedADMIN");
+  //   }
+  //   else if(msg =="authenticatedUSER"){
+  //     setAuthenticate("authenticatedUSER");
+  //   }
+  // }
+  // if (!authenticate) {
 
-//     return <div>
-//       <LogInPage handleLogin={handleLogin}  /></div>
-//   }
+  //   return <div>
+  //     <LogInPage handleLogin={handleLogin}  /></div>
+  // }
 // else if (authenticate == "authenticatedADMIN" ) {
 //   console.log("inside admin")
 
@@ -31,9 +31,8 @@ export default function App() {
 
    
     <div className="main3">
-       <br />
-      <h1>Car Next Door</h1>
-      <br />
+    
+      <br />  <br />
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="Home">Home</a>
