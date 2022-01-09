@@ -4,7 +4,7 @@ import '../index.css';
 import {Link} from 'react-router-dom'
 
 
-export default class ListCars extends Component {
+export default class ListCarsUser extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,14 +21,14 @@ export default class ListCars extends Component {
 
             });
     }
-    deleteListCar(car_Id) {
-        axios.delete(`api/delete/${car_Id}`)
-            .then(res => {
-                const Cars = this.state.Cars.filter
-                    (item => item.car_Id !== car_Id);
-                this.setState({ Cars });
-            })
-    }
+    // deleteListCar(car_Id) {
+    //     axios.delete(`api/delete/${car_Id}`)
+    //         .then(res => {
+    //             const Cars = this.state.Cars.filter
+    //                 (item => item.car_Id !== car_Id);
+    //             this.setState({ Cars });
+    //         })
+    // }
 
     render() {
 
@@ -48,7 +48,6 @@ export default class ListCars extends Component {
                                 <h3 className="recipe-title">color:{item.car_color}</h3>
                                 <h3 className="recipe-title">TypeCar:{item.car_type}</h3>
                                 <h3>Owner Of Car:{item.owner.owner_firstName}{item.owner.owner_lastName}</h3>
-                                <button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button>
                                 <button>Request</button>
                                 {/* <Link to={`/DetailsCar/${item.car_Id}`}> */}
 
@@ -69,11 +68,4 @@ export default class ListCars extends Component {
 
     }
 }
-
-
-
-
-
-
-
 

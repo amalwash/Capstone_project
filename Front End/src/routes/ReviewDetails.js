@@ -6,25 +6,26 @@ export default function ReviewDetails() {
 
 //  alert("Thank you, your order has been placed, pick up the car")
 
-    let [review_id, setReview_id] = useState("")
+    
     let [review_details, setReview_details] = useState("")
     let [review_Date, setReview_Date] = useState("")
+    let [booking_id, setBooking_id] = useState("")
 
 
-    function handleReview_id(event) {
-        setReview_id((review_id = event.target.value));
-    }
+   
     function handleReview_details(event) {
         setReview_details((review_details = event.target.value));
     }
     function handleReview_Date(event) {
         setReview_Date((review_Date = event.target.value));
     }
+    function handleBookingId(event) {
+        setBooking_id((booking_id = event.target.value));
+    }
+
+
     function rgisterHandel() {
-        let Reviews = { review_id: review_id, review_details: review_details, review_Date: review_Date }
-
-    
-
+        let Reviews = { review_details: review_details, review_Date: review_Date, }
     console.log("insid function");
     console.log(Reviews)
     axios({
@@ -37,32 +38,38 @@ export default function ReviewDetails() {
 
 return (
 
-    <form action="/reg" method="POST" id="regForm">
-        <h1 > Register Review </h1>
+    <div>
+        <h3 > Register Review </h3>
         <br />
-        <label> ReviewId: </label>
+        {/* <label> ReviewId: </label><br />
         <input type="text" name="ReviewId"
-            placeholder="ReviewId"class="textbox"
+            placeholder="ReviewId"
             onChange={handleReview_id}
-        />
+        /> */}
         <br />  <br />
         
-        <label className="last"> Review Date: </label>
+        <label className="last"> Review Date: </label><br />
         <input type="textarea" name="ReviewDate"
-            placeholder="ReviewDate"class="textbox"
+            placeholder="ReviewDate"
             onChange={handleReview_Date}
         />
         <br />  <br />
-        <label> Review Details: </label>
+        <label> Review Details: </label><br />
         <textarea maxlength="290" name=" Review Details" id="info"
-        placeholder="ReviewDetails" class="textbox"
+        placeholder="ReviewDetails" 
             onChange={handleReview_details}
             />
         <br />  <br />
+        <label> BookingId: </label><br />
+        <input type="text" name="BookingId"
+            placeholder="BookingId"c
+            onChange={handleBookingId}
+        />
         <button onClick={rgisterHandel}>Submit</button>
+  
+ </div>
+    
         
- 
-        </form>
 
 );
 

@@ -1,14 +1,14 @@
 import React from "react";
 import react, {useState } from 'react';
 import axios from "axios";
-
+import {Link} from 'react-router-dom'
 
 
 
 export default function RegisterCar(){
 
     
-    let [car_Id, setCar_Id] = useState("")
+    // let [car_Id, setCar_Id] = useState("")
     let [car_model, setCar_model] = useState("")
     let [car_color, setCar_color] = useState("")
     let [car_type, setCar_type] = useState("")
@@ -17,9 +17,9 @@ export default function RegisterCar(){
   let[ owner_id , setOwner_id]= useState("")
 
 
-    function handleCar_Id(event) {
-        setCar_Id((car_Id = event.target.value));
-    }
+    // function handleCar_Id(event) {
+    //     setCar_Id((car_Id = event.target.value));
+    // }
 
     function handleCar_model(event) {
         setCar_model((car_model = event.target.value));
@@ -44,7 +44,7 @@ export default function RegisterCar(){
         setOwner_id((owner_id=event.target.value))
        }
     function rgisterHandel() {
-        let NewCar = { car_Id: car_Id, car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img  ,owner:{owner_id:owner_id} }
+        let NewCar = {  car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img  ,owner:{owner_id:owner_id} }
 
         console.log("insid function");
         console.log(NewCar)
@@ -57,17 +57,18 @@ export default function RegisterCar(){
     }
 
     return (
-        <div>
+    <div >
+       
         
-        <h1  > Register NewCar </h1>
+        <h4 > Register NewCar </h4>
         <br />
                 
 
-        <label> CarId: </label>
+        {/* <label> CarId: </label>
         <input type="text" name="CarId"
             placeholder="CarId"
             onChange={handleCar_Id}
-        />
+        /> */}
         <br />  <br />
         <label> CarModel: </label>
         <input type="text" name="CarModel"
@@ -84,28 +85,30 @@ export default function RegisterCar(){
         <br />  <br />
         <label for="CarType">CarType :</label>
     <select  name="CarType"onChange={handleCar_type}>
-      <option value="van">van</option>
-      <option value="Ute">Ute</option>
-      <option value="SmallCar">SmallCar</option>
+      <option   value="van">van</option>
+      <option  value="Ute">Ute</option>
+      <option  value="SmallCar">SmallCar</option>
     </select>
          <br />  <br />
         <label> img     : </label>
-        <input placeholder=" image" onChange={handleImg} />
+        <input  placeholder=" image" onChange={handleImg} />
       
         <br />  <br />
         <label> Description: </label>
-        <input type="text" name="Description"
+        <input  type="text" name="Description"
             placeholder="Description" onChange={handleCar_description}
         />
+ <br />  <br />
            <label> OwnerID: </label>
-        <input type="text" name="OwnerID"
+        <input  type="text" name="OwnerID"
             placeholder="OwnerID" onChange={handleOwner_id}
            
         />
         <br />  <br />
-        <button onClick={rgisterHandel}>Submit</button>
+         <button onClick={rgisterHandel}>Submit</button> 
 
     </div>
+    
 
 );
     }

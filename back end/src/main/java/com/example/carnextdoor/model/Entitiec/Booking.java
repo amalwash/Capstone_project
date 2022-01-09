@@ -1,11 +1,19 @@
 package com.example.carnextdoor.model.Entitiec;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Booking {
     @Id
-    private int Booking_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
 
 
@@ -17,28 +25,26 @@ public class Booking {
     @JoinColumn(name = "UsersName", referencedColumnName = "userName")
     private User user;
 
-
-    @OneToOne
-    @JoinColumn(name = "review_id", unique = true, updatable = false)
-    private Review review;
+  @OneToOne(mappedBy = "booking")
+  @JsonIgnore
+  private Review review;
 
 
     public Booking() {
     }
 
-    public Booking(int booking_id, Car car, User user, Review review) {
-        Booking_id = booking_id;
+    public Booking( Car car, User user) {
+
         this.car = car;
         this.user = user;
-        this.review = review;
     }
 
-    public int getBooking_id() {
-        return Booking_id;
+    public int getId() {
+        return id;
     }
 
-    public void setBooking_id(int booking_id) {
-        Booking_id = booking_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Car getCar() {
@@ -57,11 +63,4 @@ public class Booking {
         this.user = user;
     }
 
-    public Review getReview() {
-        return review;
-    }
-
-    public void setReview(Review review) {
-        this.review = review;
-    }
 }

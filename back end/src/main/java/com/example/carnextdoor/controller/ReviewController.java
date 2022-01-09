@@ -11,7 +11,7 @@ import java.util.Optional;
 
 
 @RestController
-@RequestMapping(path = "/review")
+@RequestMapping(path = "review")
 public class ReviewController {
     private ReviewService reviewService;
 
@@ -32,6 +32,7 @@ public class ReviewController {
     }
     @PostMapping("add")
     public void registerNewReview(@RequestBody Review review) {
+        System.out.println("inside add review");
         reviewService.addNewReview(review);
     }
 }

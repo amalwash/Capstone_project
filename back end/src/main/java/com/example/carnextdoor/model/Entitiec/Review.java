@@ -1,53 +1,59 @@
 package com.example.carnextdoor.model.Entitiec;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Review {
     @Id
-    private int Review_id;
-    private String Review_details;
-    private String Review_Date;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String review_details;
+    private String review_Date;
 
 
 
-
-    @OneToOne(mappedBy = "review")
+    @OneToOne
+    @JoinColumn(name = "booking_id" )//, unique = true,updatable = false)
     private Booking booking;
 
 
-    public Review(int review_id, String review_details, String review_Date, Booking booking) {
-        Review_id = review_id;
-        Review_details = review_details;
-        Review_Date = review_Date;
+    public Review( String review_details, String review_Date, Booking booking) {
+        this.review_details = review_details;
+        this.review_Date = review_Date;
         this.booking = booking;
     }
 
     public Review() {
     }
 
-    public int getReview_id() {
-        return Review_id;
+    public int getId() {
+        return id;
     }
 
-    public void setReview_id(int review_id) {
-        Review_id = review_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getReview_details() {
-        return Review_details;
+        return review_details;
     }
 
     public void setReview_details(String review_details) {
-        Review_details = review_details;
+        this.review_details = review_details;
     }
 
     public String getReview_Date() {
-        return Review_Date;
+        return review_Date;
     }
 
     public void setReview_Date(String review_Date) {
-        Review_Date = review_Date;
+        this.review_Date = review_Date;
     }
 
     public Booking getBooking() {
@@ -58,3 +64,4 @@ public class Review {
         this.booking = booking;
     }
 }
+

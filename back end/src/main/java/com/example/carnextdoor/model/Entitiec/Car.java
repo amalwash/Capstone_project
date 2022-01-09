@@ -1,12 +1,19 @@
 package com.example.carnextdoor.model.Entitiec;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Car {
     @Id
-    private int car_Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String car_model;
     private String car_color;
     private String car_type;
@@ -27,8 +34,8 @@ public class Car {
 //    private Booking booking;
 
 
-    public Car(int car_Id, String car_model, String car_color, String car_type, String car_description, String img, Owner owner, Booking booking) {
-        this.car_Id = car_Id;
+    public Car( String car_model, String car_color, String car_type, String car_description, String img, Owner owner, Booking booking) {
+
         this.car_model = car_model;
         this.car_color = car_color;
         this.car_type = car_type;
@@ -41,12 +48,12 @@ public class Car {
     public Car() {
     }
 
-    public int getCar_Id() {
-        return car_Id;
+    public int getId() {
+        return id;
     }
 
-    public void setCar_Id(int car_Id) {
-        this.car_Id = car_Id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCar_model() {

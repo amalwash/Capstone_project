@@ -1,7 +1,7 @@
 import React from "react";
 import react, { useState } from 'react';
 import axios from "axios";
-
+import {Link} from 'react-router-dom'
 export default function RegisterOwner() {
 
     let [owner_id, setowner_id] = useState("")
@@ -51,53 +51,53 @@ export default function RegisterOwner() {
 
     return (
 
+        // <form action="/reg" method="POST" id="regForm">
         <div>
-            <h1 > Register NewOwner </h1>
+            <h4 > Register NewOwner </h4>
             <br />
-            <label> OwnerId: </label>
-            <input type="text" name="OwnerId"
+            <label> OwnerId: </label><br />
+            <input  type="text" name="OwnerId"
                 placeholder="OwnerId"
                 onChange={handleOwner_id}
             />
             <br />  <br />
-            <label> Firstname: </label>
+            <label> Firstname: </label><br />
             <input type="text" name="firstName"
                 placeholder="FirstName"
                 onChange={handleOwner_firstName}
             />
             <br />  <br />
 
-            <label className="last"> Lastname: </label>
+            <label className="last"> Lastname: </label><br />
             <input type="text" name="lastName"
                 placeholder="LastName"
                 onChange={handleOwner_lastName}
             />
             <br />  <br />
 
-            <label> Age: </label>
+            <label> Age: </label><br />
             <input type="text" name="age"
                 placeholder="Age" onChange={handleOwner_age}
             />
             <br />  <br />
-            <label> Email: </label>
+            <label> Email: </label><br />
             <input type="text" name="email"
                 placeholder="email" onChange={handleOwner_email}
             />
             <br />  <br />
-            <label> Address: </label>
+            <label> Address: </label><br />
             <input type="text" name="Address"
                 placeholder="Address" onChange={handleOwner_address}
             />
             <br />  <br />
-            <label> Phone: </label>
+            <label> Phone: </label><br />
             <input type="text" name="phone"
                 placeholder="phone" onChange={handlEOwner_phone}
             />
             <br />  <br />
-            <button onClick={rgisterHandel}>Submit</button>
+            <Link to="/RegisterCar"><button  onClick={rgisterHandel}>Submit</button> </Link>
 
-        </div>
-
+            </div>
 
     );
 }

@@ -6,6 +6,8 @@ import Home from './routes/Home';
 import ListCars from './routes/ListCars';
 import ListVanCar from './routes/ListVanCar';
 import Epenses from './routes/expenses';
+import ListCarsUser from './routes/ListCarsUser';
+import Booking from './routes/Booking';
 import ReviewDetails from './routes/ReviewDetails';
 import Request from './routes/Request';
 import ListSmallCar from './routes/ListSmallCar';
@@ -28,7 +30,7 @@ ReactDOM.render(
         <Route path=":registerCar" element={<RegisterCar />} />
         <Route path="registerOwner" element={< RegisterOwner />} />
         <Route path="registerUser" element={<RegisterUser />}/>
-        <Route path="/Request" element={<Request />} />
+        <Route path="/ListCarsUser" element={<ListCarsUser />} />
 
         <Route path="ListCars" element={<ListCars />} />
         <Route path="ListCars" element={<ListCars />} />
@@ -37,6 +39,7 @@ ReactDOM.render(
         <Route path="listUteCar" element={<ListUteCar />} />
         <Route path="LogInPage" element={<LogInPage />} />
         <Route path="ReviewDetails" element={<ReviewDetails />} />
+        <Route path="Booking" element={<Booking />} />
         <Route path="Epenses" element={<Epenses />}>
           <Route path="Epenses" element={<Epenses />} />
           <Route

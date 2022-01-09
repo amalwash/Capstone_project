@@ -44,7 +44,7 @@ export default function RegisterUser() {
 
 
   function rgisterHandel() {
-    let NewUser = { user_id: user_id, user_firstName: firstName, user_age: Age, user_email: Email, user_address: Address, user_phone: phone, userName: userName, password: password }
+    let NewUser = { user_id: user_id, user_firstName: firstName, user_age: Age, user_email: Email, user_address: Address, password:password ,userName:userName }
 
     console.log("insid function");
     console.log(NewUser)
