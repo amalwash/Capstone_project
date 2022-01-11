@@ -30,10 +30,17 @@ public class ReviewController {
     public Optional<Review> getReview(@PathVariable(name = "reviewId") Integer reviewId) {
         return reviewService.getReview(reviewId);
     }
+
     @PostMapping("add")
     public void registerNewReview(@RequestBody Review review) {
         System.out.println("inside add review");
         reviewService.addNewReview(review);
+    }
+
+    @DeleteMapping(path = "api/delete/{id}")
+    public void deleteReview(@PathVariable("reviewId") String reviewId) {
+        int intreviewId= Integer.parseInt(reviewId);
+        reviewService.deleteReview(intreviewId);
     }
 }
 

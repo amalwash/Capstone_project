@@ -480,9 +480,7 @@ hr.intro-divider {
       text-align: left;
   }
 }
-/* .img-responsive{
-  height: 200px;
-} */
+
 
 @media(min-width:992px) {
   .timeline>li {
@@ -576,5 +574,6 @@ form {
   color:rgba(0,0,0,0.5);
   outline: none;
 }
+
 
 

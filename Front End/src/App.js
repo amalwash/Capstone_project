@@ -44,6 +44,7 @@ export default function App() {
                 <Link class="nav-link" to="RegisterOwner">RegisterOwner</Link>
                 <Link class="nav-link" to="RegisterCar">RegisterCar</Link>
                 <Link class="nav-link" to="ListCars">ListCars</Link>
+                <Link class="nav-link" to="ReviewEmphasis">ReviewEmphasis</Link>
                 <Link class="nav-link" to="ReviewDetails">ReviewDetails</Link>
                 {/* <Link class="nav-link" to="ReviewDetails">ReviewDetails</Link> */}
               </div>

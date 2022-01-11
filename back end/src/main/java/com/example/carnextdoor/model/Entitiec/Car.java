@@ -28,10 +28,7 @@ public class Car {
     @OneToOne(mappedBy = "car")
     private Booking booking;
 
-
-//    @OneToOne
-//    @JoinColumn(name = "Booking_ID",unique = true,updatable = false)
-//    private Booking booking;
+    
 
 
     public Car( String car_model, String car_color, String car_type, String car_description, String img, Owner owner, Booking booking) {

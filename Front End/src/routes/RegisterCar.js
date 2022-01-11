@@ -57,57 +57,49 @@ export default function RegisterCar(){
     }
 
     return (
-    <div >
+        <form class="form">
        
         
-        <h4 > Register NewCar </h4>
+        <h4  > Register NewCar </h4>
         <br />
-                
-
-        {/* <label> CarId: </label>
-        <input type="text" name="CarId"
-            placeholder="CarId"
-            onChange={handleCar_Id}
-        /> */}
-        <br />  <br />
         <label> CarModel: </label>
         <input type="text" name="CarModel"
-            placeholder="CarModel"
+            placeholder="CarModel"class="textbox"
             onChange={handleCar_model}
         />
         <br />  <br />
 
         <label> CarColor: </label>
         <input type="text" name="CarColor"
-            placeholder="CarColor"
+            placeholder="CarColor"class="textbox"
             onChange={handleCar_color}
         />
         <br />  <br />
-        <label for="CarType">CarType :</label>
+        <label  for="CarType">CarType :</label>
     <select  name="CarType"onChange={handleCar_type}>
-      <option   value="van">van</option>
-      <option  value="Ute">Ute</option>
-      <option  value="SmallCar">SmallCar</option>
+      <option  class="textbox" value="van">van</option>
+      <option class="textbox" value="Ute">Ute</option>
+      <option class="textbox" value="SmallCar">SmallCar</option>
     </select>
          <br />  <br />
         <label> img     : </label>
-        <input  placeholder=" image" onChange={handleImg} />
+        <input class="textbox" placeholder=" image" onChange={handleImg} />
       
         <br />  <br />
         <label> Description: </label>
-        <input  type="text" name="Description"
+        <input  type="text" name="Description" class="textbox"
             placeholder="Description" onChange={handleCar_description}
         />
  <br />  <br />
            <label> OwnerID: </label>
-        <input  type="text" name="OwnerID"
+        <input  type="text" name="OwnerID"class="textbox"
             placeholder="OwnerID" onChange={handleOwner_id}
            
         />
         <br />  <br />
          <button onClick={rgisterHandel}>Submit</button> 
 
-    </div>
+   </form>
     
 
 );

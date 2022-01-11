@@ -48,4 +48,4 @@ export default function Booking() {
          <button class="btn btn-outline-secondary" onClick={rgisterHandel}>Submit</button> 
         </form>
     )
-}
+} 

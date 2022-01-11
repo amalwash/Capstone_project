@@ -50,7 +50,7 @@ export default class ListCars extends Component {
                                 <h3>Owner Of Car:{item.owner.owner_firstName}{item.owner.owner_lastName}</h3>
                                 <button onClick={(e) => this.deleteListCar(item.car_Id, e)}>delete</button>
                                 <button>Request</button>
-                                {/* <Link to={`/DetailsCar/${item.car_Id}`}> */}
+                              
 
                             </div>
 

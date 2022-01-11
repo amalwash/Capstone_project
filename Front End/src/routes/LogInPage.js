@@ -8,7 +8,7 @@ export default function LogInPage(props) {
     
   const [userName, setmyUsername] = useState("")
   const [password, setmypassword] = useState("")
-   const [roles, setRoles] = useState("")
+  //  const [roles, setRoles] = useState("")
   const [check, setCheck] = useState("")
   const [message, setmessage] = useState("");
 

@@ -10,6 +10,7 @@ import ListCarsUser from './routes/ListCarsUser';
 import Booking from './routes/Booking';
 import ReviewDetails from './routes/ReviewDetails';
 import Request from './routes/Request';
+import ReviewEmphasis from './routes/ReviewEmphasis';
 import ListSmallCar from './routes/ListSmallCar';
 import RegisterUser from './routes/RegisterUser';
 import ListUteCar from './routes/ListUteCar';
@@ -35,6 +36,7 @@ ReactDOM.render(
         <Route path="ListCars" element={<ListCars />} />
         <Route path="ListCars" element={<ListCars />} />
         <Route path="ListSmallCar" element={<ListSmallCar />} />
+        <Route path="ReviewEmphasis" element={<ReviewEmphasis />} />
         <Route path="listVanCar" element={<ListVanCar />} />
         <Route path="listUteCar" element={<ListUteCar />} />
         <Route path="LogInPage" element={<LogInPage />} />
