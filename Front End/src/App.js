@@ -1,31 +1,13 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import LogInPage from "./routes/LogInPage";
-import Home from "./routes/Home";
+
 
 
 export default function App() {
 
 
-  // let [authenticate, setAuthenticate] = useState(false);
-  // let check = "";
-  // function handleLogin(msg) {
-  //   if (msg == "authenticatedADMIN") {
-  //     setAuthenticate("authenticatedADMIN");
-  //   }
-  //   else if (msg == "authenticatedUSER") {
-  //     setAuthenticate("authenticatedUSER");
-  //   }
-  // }
-  // if (!authenticate) {
-
-  //   return <div>
-  //     <LogInPage handleLogin={handleLogin} /></div>
-  // }
-  // else if (authenticate == "authenticatedADMIN") {
-  //   console.log("inside admin")
-
+  let checkLogIn = localStorage.getItem("carId")
+  
     return (
 
 
@@ -33,6 +15,7 @@ export default function App() {
       <div className="main3">
 
         <br />  <br />
+        <button onClick={()=>{localStorage.setItem("Check","")}}>LogOut</button>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="Home">Home</a>
@@ -46,7 +29,9 @@ export default function App() {
                 <Link class="nav-link" to="ListCars">ListCars</Link>
                 <Link class="nav-link" to="ReviewEmphasis">ReviewEmphasis</Link>
                 <Link class="nav-link" to="ReviewDetails">ReviewDetails</Link>
-                {/* <Link class="nav-link" to="ReviewDetails">ReviewDetails</Link> */}
+                <Link class="nav-link" to="LogInPage">LogInPage</Link>
+                
+                 <Link class="nav-link" to="Booking">Booking</Link> 
               </div>
             </div>
           </div>

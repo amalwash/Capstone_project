@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from 'react';
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Request from "./Request";
+import '../App.css';
+
 
 export default function RegisterUser() {
 
@@ -58,7 +59,7 @@ export default function RegisterUser() {
 
   return (
 
-    <div>
+    <div class="login-card">
       <h1 > Register NewUser </h1>
       <br />
       <label> UserID: </label>

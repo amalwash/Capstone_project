@@ -96,8 +96,9 @@ export default function RegisterOwner() {
             />
             <br />  <br />
             <Link to="/RegisterCar"><button  onClick={rgisterHandel}>Submit</button> </Link>
-
+             
            </form>
+
 
     );
 }

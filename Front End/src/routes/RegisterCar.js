@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom'
 export default function RegisterCar(){
 
     
-    // let [car_Id, setCar_Id] = useState("")
+    
     let [car_model, setCar_model] = useState("")
     let [car_color, setCar_color] = useState("")
     let [car_type, setCar_type] = useState("")
@@ -16,10 +16,6 @@ export default function RegisterCar(){
     let [ img , setImg]  = useState("")
   let[ owner_id , setOwner_id]= useState("")
 
-
-    // function handleCar_Id(event) {
-    //     setCar_Id((car_Id = event.target.value));
-    // }
 
     function handleCar_model(event) {
         setCar_model((car_model = event.target.value));
@@ -43,7 +39,8 @@ export default function RegisterCar(){
     function handleOwner_id(event){
         setOwner_id((owner_id=event.target.value))
        }
-    function rgisterHandel() {
+       function rgisterHandel(event) {
+        event.preventDefault();
         let NewCar = {  car_model:car_model, car_color:car_color, car_type:car_type, car_description:car_description,img:img  ,owner:{owner_id:owner_id} }
 
         console.log("insid function");
@@ -97,7 +94,7 @@ export default function RegisterCar(){
            
         />
         <br />  <br />
-         <button onClick={rgisterHandel}>Submit</button> 
+        <button onClick={(e)=>{rgisterHandel(e)}}>Submit</button>
 
    </form>
     

@@ -21,7 +21,8 @@ export default function ReviewDetails() {
     }
 
 
-    function rgisterHandel() {
+    function rgisterHandel(event) {
+        event.preventDefault();
         let Reviews = { review_details: review_details, review_Date: review_Date, booking:{id: booking_id} }
         console.log("insid function");
         console.log(Reviews)
@@ -57,7 +58,7 @@ export default function ReviewDetails() {
                 onChange={handleBookingId}
             />
             <br />  <br />
-            <button onClick={rgisterHandel}>Submit</button>
+            <button onClick={(e)=>{rgisterHandel(e)}}>Submit</button>
 
      </form>
 

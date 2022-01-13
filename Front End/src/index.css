@@ -467,6 +467,17 @@ hr.intro-divider {
       height: 100px;
       margin-left: -50px;
   }
+  .card1 {
+    transition: 0.3s;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 100px;
+    padding: 100px;
+  }
+  .container1{
+    background-color: white;
+  }
 
   .timeline>li .timeline-image h4 {
       margin-top: 16px;
